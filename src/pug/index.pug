@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="css/styles.css")
+    title Seatrips
+
+  body
+    header.header
+      nav.navbar.navbar-expand-lg.navbar-light.menutop
+        .container
+          a.navbar-brand(href="#")
+            img.logo(src="/img/sealogo.png", alt="Seatrips")
+          button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              li.nav-item: a.nav-link.ttxtmain(href="#") головна
+              li.nav-item: a.nav-link.ttxt(href="#") послуги
+              li.nav-item: a.nav-link.ttxt(href="#") про компанію
+              li.nav-item: a.nav-link.ttxt(href="#") акції
+              li.nav-item: a.nav-link.ttxt(href="#") партнери
+              li.nav-item: a.nav-link.ttxt(href="#") відгуки
+              li.nav-item: a.nav-link.ttxt(href="#") контакти
+
+      .seatripstext
+        .container
+          p.titletxt морські пригоди 
+          p.subtitle Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+          button.btn.btn-warning.bthdetal(type="button") Детальніше
+          .scroll-section
+            h2.changeyourplan ОБЕРИ СВІЙ 
+            p ПЛАН ПОДОРОЖІ
+            p Наша фірма – лідер на ринку у своїй сфері
+          img(class="scroll-btm" src="/img/scrollbottom.png", alt="")
+
+    script(src="js/scripts.js")
