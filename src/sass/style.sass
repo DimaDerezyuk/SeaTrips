@@ -3,6 +3,9 @@
   padding: 0
   box-sizing: border-box
 
+html, body
+  overflow-x: hidden
+
 body
   font-family: 'Rubik', sans-serif
 
@@ -10,14 +13,16 @@ header
   background: url('../img/shipbgc.jpg') no-repeat center/cover
   height: 110vh
   position: relative
+  flex-wrap: nowrap
 
-.menutop
-  position: absolute
-  top: 0
-  width: 100%
-  padding: 10px 30px
-  background: transparent
-  z-index: 10
+.menutop .container
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.navbar-light
+  padding-bottom: 150px 
+
 
 .navbar
   padding-top: 15px 
@@ -45,23 +50,23 @@ header
 .changeyourplan
   padding-top: 155px
 
+.navbar-collapse
+  justify-content: right
+
 .navbar-nav .nav-link:hover
   color: orange
 
 .logo
-  padding-right: 350px
   height: 50px
 
 .seatripstext
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
   text-align: center
   color: white
   width: 90%
   max-width: 800px
-  padding: 20px
+  margin: 0 auto
+  padding-bottom: 60px
+
 
 .titletxt
   font-size: 72px
@@ -74,7 +79,7 @@ header
   text-align: center
 
 .btn-warning
-  padding: 11 px 25px
+  padding: 11px 25px
   border-radius: 25px 
 
 .subtitle
