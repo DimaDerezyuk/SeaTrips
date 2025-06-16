@@ -10,10 +10,23 @@ body
   font-family: 'Rubik', sans-serif
 
 header
-  background: url('../img/shipbgc.jpg') no-repeat center/cover
-  height: 110vh
   position: relative
-  flex-wrap: nowrap
+  background: url('../img/shipbgc.jpg') no-repeat center/cover
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 30% 
+    background: linear-gradient(to top, #fff 0%, transparent 100%)
+    z-index: 2
+
+  .container
+    position: relative
+    z-index: 3
+
 
 .menutop .container
   display: flex
@@ -67,6 +80,9 @@ header
   margin: 0 auto
   padding-bottom: 60px
 
+.ourcompany
+  font-style: italic
+
 
 .titletxt
   font-size: 72px
@@ -79,8 +95,15 @@ header
   text-align: center
 
 .btn-warning
-  padding: 11px 25px
+  padding: 9.5px 39.2px
   border-radius: 25px 
+  color: #fff
+
+.btn-warning:hover
+  background-color: #3b9aed
+  color: #2466df
+  border-color: #3b9aed
+  text-decoration: none
 
 .subtitle
   font-size: 18px
@@ -96,7 +119,107 @@ header
       font-weight: 700
   p
     font-size: 34px
-    font-style: italic
 
 .scroll-btm
   cursor: pointer
+
+.card 
+  background-color: #fff
+  padding: 1.5rem
+  transition: box-shadow 0.3s ease 
+
+  &:hover 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1)
+  
+
+  i 
+    display: block
+    margin-bottom: 0.5rem
+  
+
+  h6 
+    font-weight: 450
+
+  
+
+  p 
+    margin-bottom: 0.25rem
+  
+
+
+.card.position-relative::before 
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  border-top: 40px solid #26cb15
+  border-right: 40px solid transparent
+
+.text-primary
+  font-size: 24px
+  line-height: 44px
+  color: #0099ff
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.text-muted
+  text-align: left
+
+.seeallplans
+  text-decoration: none
+
+.mb-3.text-muted
+  font-style: italic
+
+.col-md-3.text-center 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 1.5rem 1rem
+
+  h3 
+    justify-content: left
+    font-weight: 100
+    font-size: 0.5rem
+  
+
+  p 
+    font-size: 1rem
+    color: #6c757d
+  
+
+  .btn 
+    background-color: #ffc107
+    color: #000
+    font-weight: 600
+
+.underbtn
+  padding-top: 45px
+  color: #bbb
+
+
+.detail-btn 
+  background-color: #ffc107
+  color: #fff
+  text-decoration: none
+  font-weight: 600
+  font-size: 14px
+  padding: 9.5px 39.2px
+  border: none
+  border-radius: 20px
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)
+  width: max-content
+  white-space: nowrap
+  transition: all 0.2s ease-in-out
+
+  &:hover 
+    background-color: #3b9aed
+    color: #fff
+    text-decoration: none
+
+
+  
+
+
+ 

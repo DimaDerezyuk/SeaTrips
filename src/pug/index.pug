@@ -34,8 +34,48 @@ html(lang="en")
           button.btn.btn-warning.bthdetal(type="button") Детальніше
           .scroll-section
             h2.changeyourplan ОБЕРИ СВІЙ 
-            p ПЛАН ПОДОРОЖІ
-            p Наша фірма – лідер на ринку у своїй сфері
+            p.plan ПЛАН ПОДОРОЖІ
+            p.ourcompany Наша фірма – лідер на ринку у своїй сфері
           img(class="scroll-btm" src="img/scrollbottom.png", alt="")
+        .container
+.container.py-5
+  .row.align-items-center
+    .col-md-3.mb-4.d-flex.flex-column.justify-content-center.text-start
+      h3.mb-2 ПРО НАШУ 
+      h3.mb-3 КОМПАНІЮ
+      p.mb-3.text-muted Наша компанія пропонує ряд цікавих дозвіллєвих послуг і ми дійсно будемо раді здивувати!
+      a.btn.btn-warning.detail-btn(Еhref="#") ДЕТАЛЬНІШЕ
+      p.underbtn * - зверніть увагу, зміна ціни може залежати від курсу долара.
+
+    .col-md-3.mb-4
+      .card.border-0.text-center.h-100
+        .card-body
+          img.mb-3(src="img/CardBiker.png", alt="")
+          h6 Тур на велосипедах
+          p.text-primary.mb-1 335 грн*
+          p.text-muted Подорожі на велосипедах в горах і по лісовому мальовничому маршруту.
+
+    .col-md-3.mb-4
+      .card.border-0.text-center.h-100.position-relative
+        .card-body
+          img.mb-3(src="img/CardCircle.png", alt="")
+          h6 Екскурсії на острів
+          p.text-primary.mb-1 500 грн*
+          p.text-muted Подорож на острів зарядить вас у найближчий порт.
+
+    .col-md-3.mb-4
+      .card.border-0.text-center.h-100.position-relative
+        .card-body
+          img.mb-3(src="img/CardMessage.png", alt="")
+          h6 Особливе замовлення
+          p.text-primary.mb-1 250 грн*
+          p.text-muted Індивідуальне замовлення під ваші побажання.
+
+  .row
+    .col-12.text-center.mt-3
+      a.seeallplans(href="#") Дивитись усі плани
+
+
+
 
     script(src="js/scripts.js")
