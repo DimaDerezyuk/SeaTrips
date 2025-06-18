@@ -3,6 +3,7 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
     link(rel="preconnect", href="https://fonts.googleapis.com")
     link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap", rel="stylesheet")
@@ -34,46 +35,53 @@ html(lang="en")
           button.btn.btn-warning.bthdetal(type="button") Детальніше
           .scroll-section
             h2.changeyourplan ОБЕРИ СВІЙ 
-            p.plan ПЛАН ПОДОРОЖІ
-            p.ourcompany Наша фірма – лідер на ринку у своїй сфері
+            h2.plan ПЛАН ПОДОРОЖІ
+            p.firmadesc.small.text-muted Наша фірма – лідер на ринку у своїй сфері
           img(class="scroll-btm" src="img/scrollbottom.png", alt="")
         .container
 .container.py-5
   .row.align-items-center
     .col-md-3.mb-4.d-flex.flex-column.justify-content-center.text-start
-      h3.mb-2 ПРО НАШУ 
-      h3.mb-3 КОМПАНІЮ
-      p.mb-3.text-muted Наша компанія пропонує ряд цікавих дозвіллєвих послуг і ми дійсно будемо раді здивувати!
+      h2.companytop.mb-2 ПРО НАШУ 
+      h2.companytop.mb-3 КОМПАНІЮ
+      p.mb-3.text-muted Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
       a.btn.btn-warning.detail-btn(Еhref="#") ДЕТАЛЬНІШЕ
       p.underbtn * - зверніть увагу, зміна ціни може залежати від курсу долара.
 
     .col-md-3.mb-4
       .card.border-0.text-center.h-100
         .card-body
-          img.mb-3(src="img/CardBiker.png", alt="")
+          include components/bikercard
           h6 Тур на велосипедах
           p.text-primary.mb-1 335 грн*
           p.text-muted Подорожі на велосипедах в горах і по лісовому мальовничому маршруту.
 
     .col-md-3.mb-4
       .card.border-0.text-center.h-100.position-relative
+        i.fas.fa-star.corner-star
         .card-body
-          img.mb-3(src="img/CardCircle.png", alt="")
+          include components/circledot
           h6 Екскурсії на острів
           p.text-primary.mb-1 500 грн*
           p.text-muted Подорож на острів зарядить вас у найближчий порт.
 
+
     .col-md-3.mb-4
       .card.border-0.text-center.h-100.position-relative
+        i.fas.fa-star.corner-star
         .card-body
-          img.mb-3(src="img/CardMessage.png", alt="")
+          include components/message
           h6 Особливе замовлення
           p.text-primary.mb-1 250 грн*
           p.text-muted Індивідуальне замовлення під ваші побажання.
 
+
   .row
-    .col-12.text-center.mt-3
-      a.seeallplans(href="#") Дивитись усі плани
+    .col-12.text-center.custom-spacing
+      a.seeallplans(href="#") Дивитись усі плани 
+        include components/rightarrow
+
+
 
 
 

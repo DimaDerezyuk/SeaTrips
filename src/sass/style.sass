@@ -2,6 +2,10 @@
   margin: 0
   padding: 0
   box-sizing: border-box
+  
+html
+  scroll-behavior: smooth
+
 
 html, body
   overflow-x: hidden
@@ -80,9 +84,9 @@ header
   margin: 0 auto
   padding-bottom: 60px
 
-.ourcompany
+.firmadesc
   font-style: italic
-
+  margin-top: 1rem
 
 .titletxt
   font-size: 72px
@@ -101,10 +105,14 @@ header
 
 .btn-warning:hover
   background-color: #3b9aed
-  color: #2466df
+  color: #fff
   border-color: #3b9aed
   text-decoration: none
 
+.bluebtn
+  border-radius: 25px
+  padding: 9.5px 36.2px
+  
 .subtitle
   font-size: 18px
   margin-bottom: 30px
@@ -118,9 +126,16 @@ header
     span
       font-weight: 700
   p
-    font-size: 34px
+   font-size: 18px
+   line-height: 24px
+   color: #333333
+   font-weight: 400
+   font-style: italic
+   font-family: "Rubik"
+   text-align: center
 
 .scroll-btm
+  scroll-behavior: smooth
   cursor: pointer
 
 .card 
@@ -138,6 +153,7 @@ header
   
 
   h6 
+    padding-top: 15px
     font-weight: 450
 
   
@@ -155,6 +171,14 @@ header
   border-top: 40px solid #26cb15
   border-right: 40px solid transparent
 
+.corner-star 
+  position: absolute
+  top: 6px
+  left: 6px
+  font-size: 12px
+  color: white
+  z-index: 1
+
 .text-primary
   font-size: 24px
   line-height: 44px
@@ -167,7 +191,11 @@ header
   text-align: left
 
 .seeallplans
+  text-align: right
+  padding-right: 4px
   text-decoration: none
+hr
+  margin-top: 55px
 
 .mb-3.text-muted
   font-style: italic
@@ -178,10 +206,10 @@ header
   justify-content: center
   padding: 1.5rem 1rem
 
-  h3 
+  h2
     justify-content: left
-    font-weight: 100
-    font-size: 0.5rem
+    font-weight: 400
+    font-size: 0.9rem
   
 
   p 
@@ -218,8 +246,42 @@ header
     color: #fff
     text-decoration: none
 
+h2
+  font-size: 36px
+  line-height: 42px
+  text-transform: uppercase
+  color: #333333
+  font-weight: 400
+  font-family: "Rubik"
 
+.text-muted.blockthree
+  font-style: italic
   
 
+.btn
+  font-weight: 500
 
- 
+.bg-light
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05)
+
+.section 
+  h2 
+    line-height: 1.3
+  
+
+  p 
+    font-size: 0.95rem
+  
+
+  .btn 
+    min-width: 160px
+    padding: 10px 20px
+    font-weight: 600
+  
+
+  .btn-outline-primary 
+    border-width: 2px
+  
+
+  .bg-light 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
