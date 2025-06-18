@@ -40,50 +40,46 @@ html(lang="en")
           img(class="scroll-btm" src="img/scrollbottom.png", alt="")
         .container
 .container.py-5
-  .row.align-items-center
-    .col-md-3.mb-4.d-flex.flex-column.justify-content-center.text-start
+  .row.align-items-start
+    .col-lg-3.col-md-12.mb-4.d-flex.flex-column.justify-content-center.text-start
       h2.companytop.mb-2 ПРО НАШУ 
       h2.companytop.mb-3 КОМПАНІЮ
       p.mb-3.text-muted Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-      a.btn.btn-warning.detail-btn(Еhref="#") ДЕТАЛЬНІШЕ
+      a.btn.btn-warning.detail-btn(href="#") ДЕТАЛЬНІШЕ
       p.underbtn * - зверніть увагу, зміна ціни може залежати від курсу долара.
 
-    .col-md-3.mb-4
-      .card.border-0.text-center.h-100
-        .card-body
-          include components/bikercard
-          h6 Тур на велосипедах
-          p.text-primary.mb-1 335 грн*
-          p.text-muted Подорожі на велосипедах в горах і по лісовому мальовничому маршруту.
+    .col-lg-9.col-md-12
+      .row
+        .col-lg-4.col-md-6.col-sm-12.mb-4
+          .card.border-0.text-center.h-100
+            .card-body
+              include components/bikercard
+              h6 Тур на велосипедах
+              p.text-primary.mb-1 335 грн*
+              p.text-muted Подорожі на велосипедах в горах і по лісовому мальовничому маршруту.
 
-    .col-md-3.mb-4
-      .card.border-0.text-center.h-100.position-relative
-        i.fas.fa-star.corner-star
-        .card-body
-          include components/circledot
-          h6 Екскурсії на острів
-          p.text-primary.mb-1 500 грн*
-          p.text-muted Подорож на острів зарядить вас у найближчий порт.
+        .col-lg-4.col-md-6.col-sm-12.mb-4
+          .card.border-0.text-center.h-100.position-relative
+            i.fas.fa-star.corner-star
+            .card-body
+              include components/circledot
+              h6 Екскурсії на острів
+              p.text-primary.mb-1 500 грн*
+              p.text-muted Подорож на острів зарядить вас у найближчий порт.
 
-
-    .col-md-3.mb-4
-      .card.border-0.text-center.h-100.position-relative
-        i.fas.fa-star.corner-star
-        .card-body
-          include components/message
-          h6 Особливе замовлення
-          p.text-primary.mb-1 250 грн*
-          p.text-muted Індивідуальне замовлення під ваші побажання.
+        .col-lg-4.col-md-6.col-sm-12.mb-4
+          .card.border-0.text-center.h-100.position-relative
+            i.fas.fa-star.corner-star
+            .card-body
+              include components/message
+              h6 Особливе замовлення
+              p.text-primary.mb-1 250 грн*
+              p.text-muted Індивідуальне замовлення під ваші побажання.
 
 
   .row
     .col-12.text-center.custom-spacing
       a.seeallplans(href="#") Дивитись усі плани 
         include components/rightarrow
-
-
-
-
-
 
     script(src="js/scripts.js")
