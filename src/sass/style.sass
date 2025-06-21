@@ -410,70 +410,231 @@ h1, .text-primaryunderh1
   font-size: 12px
   color: #fff
   z-index: 2
-.testimonial
-  background: url('/images/bg-wave.jpg') center/cover no-repeat
-  color: white
+.section-hero
+  background: #f9f9f9
+
+.section-hero
+  img
+    width: 100%
+    height: auto
+    max-width: 100%
+    border-radius: 0.5rem
+    @media (max-width: 768px)
+    .section-hero img
+      max-height: 250px
+      object-fit: cover
+
+
+
+  .hero-title
+    font-family: 'Rubik', sans-serif
+    font-size: 2rem
+    line-height: 1.25
+    color: #2d2d2d
+    text-transform: uppercase
+
+  .hero-subtext
+    font-family: 'Rubik', sans-serif
+    font-size: 0.95rem
+    line-height: 1.5
+    color: #5f5f5f
+
+.btn-order
+  text-decoration: none
+  text-transform: uppercase
+  background-color: #ffc107
+  color: #fff
+  font-weight: 600
+  font-size: 14px
+  padding: 9.5px 39.2px
+  border-radius: 25px
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)
+  white-space: nowrap
+  transition: all 0.2s ease-in-out
+  display: inline-block
   text-align: center
-  padding: 80px 20px
+
+  &:hover
+    background-color: darken(#ffc107, 10%)
+
+.btn-details
+  background-color: transparent
+  text-transform: uppercase
+  text-decoration: none
+  color: #0d6efd
+  font-weight: 500
+  padding: 9.5px 39.2px
+  border-radius: 25px
+  font-size: 14px
+  border: 1px solid #0d6efd
+  transition: all 0.3s ease
+  display: inline-block
+  text-align: center
+
+  &:hover
+    background-color: #0d6efd
+    color: #fff
+
+@media (max-width: 576px)
+  .btn-order,
+  .btn-details
+    display: block
+    width: 100%
+    padding: 10px 0
+    font-size: 13px
+    margin-bottom: 10px
+    white-space: normal
+
+.price-card
+  background-color: #f2f4f6
+  padding: 1.5rem
+  border-radius: 12px
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04)
+  max-width: 100%
+
+  .price-title
+    font-size: 1.25rem
+    font-weight: 700
+    color: #007bff
+    margin-bottom: 0.75rem
+
+  .price-description
+    color: #6c757d
+    font-size: 0.9rem
+    line-height: 1.5  
+
+@media (max-width: 576px)
+  .price-card
+    width: 100%
+
+.section-surfer
+  background: url('../img/surfer.webp') center/cover no-repeat
+  color: #fff
+  padding: 100px 0
   position: relative
+  z-index: 1
 
-  .quote-mark
-    font-size: 80px
-    color: #ffcc00
-    line-height: 1
-    margin-bottom: 20px
-    font-weight: bold
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.4)
+    z-index: -1
 
-  .quote-text
-    font-size: 20px
-    font-style: italic
+  .container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+    display: flex
+    flex-direction: row
+    gap: 50px
+    align-items: center
+    justify-content: space-between
+
+  .hero-title-hero
+    color: #fff
+    font-size: 48px
+    line-height: 1.2
+
+  .hero-subtitle
+    color: #2196f3
+    display: inline-block
+
+  .hero-text
+    margin: 20px 0
+    max-width: 500px
+    font-size: 16px
+
+  .btn-hero
+    text-decoration: none
+    text-transform: uppercase
+    background-color: #ffc107
+    color: #fff
+    font-weight: 600
+    font-size: 14px
+    padding: 9.5px 39.2px
+    border-radius: 25px
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)
+    white-space: nowrap
+    transition: all 0.2s ease-in-out
+    display: inline-block
+
+    &:hover
+      background: #e0a800
+
+.section-testimonial
+  background: url('../img/oceanbg.jpg') no-repeat center/cover
+  position: relative
+  color: #fff
+  padding: 5rem 0
+
+  .testimonial-wrapper
+    max-width: 500px
+    margin-left: auto
+    padding-right: 2rem
+
+  .quote-icon i
+    font-size: 2rem
+    color: #ffc107
+
+  .testimonial-text
+    font-size: 1.05rem
     line-height: 1.6
-    max-width: 887px
-    margin: 0 auto 40px
-    position: relative
-    padding: 0 40px
-
-    &::before,
-    &::after
-      content: ""
-      position: absolute
-      top: 0
-      bottom: 0
-      width: 1px
-      background-color: rgba(255, 255, 255, 0.3)
-
-    &::before
-      left: 0
-
-    &::after
-      right: 0
+    font-weight: 300
+    color: #fff
 
   .client-info
+    img
+      border: 2px solid #fff
     .name
-      font-size: 22px
+      font-size: 1rem
       font-weight: 600
-      margin-bottom: 5px
 
-    .role
+  // Адаптивність
+  @media (max-width: 1024px)
+    .container
+      flex-direction: column
+      gap: 30px
+      text-align: center
+
+    .hero-title-hero
+      font-size: 40px
+
+  @media (max-width: 768px)
+    padding: 80px 0
+
+    .hero-title-hero
+      font-size: 32px
+
+    .hero-text
       font-size: 14px
-      color: #ccc
-      display: block
-      margin-bottom: 20px
 
-    .avatar
-      width: 70px
-      height: 70px
-      border-radius: 50%
-      overflow: hidden
-      margin: 0 auto
+    .btn-hero
+      padding: 10px 20px
+      font-size: 14px
+
+    .quote-icon
+      font-size: 40px
+
+    .author
+      flex-direction: column
+      align-items: center
+      text-align: center
 
       img
-        width: 100%
-        height: 100%
-        object-fit: cover
+        width: 40px
+        height: 40px
 
+  @media (max-width: 480px)
+    padding: 60px 0
 
+    .hero-title-hero
+      font-size: 26px
 
-
-
-
+    .btn-hero
+      width: 100%
+      padding: 10px
+      font-size: 14px
