@@ -97,6 +97,31 @@ header
   font-family: "Rubik"
   text-align: center
 
+.section-border 
+  position: relative
+  top: 75px
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 0 // щоб не впливало на розмітку
+
+  // верхня кутова рамка
+  &::before,
+  &::after 
+    content: ""
+    position: absolute
+    height: 40px
+    width: 50%
+    border-top: 4px solid rgba(255, 255, 255, 0.2)
+    top: -125px
+
+  &::before 
+    left: 5
+    border-left: 4px solid rgba(255, 255, 255, 0.2)
+  &::after 
+    right: 5
+    border-right: 4px solid rgba(255, 255, 255, 0.2)
+
 .btn-warning
   text-transform: uppercase
   padding: 9.5px 39.2px
@@ -378,6 +403,18 @@ h1, .text-primaryunderh1
   color: #ffffff
   font-weight: 400
   font-family: "Rubik"
+.hero-image
+  width: 100%
+  height: auto
+  border-radius: 10px
+  object-fit: cover
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+
+@media (max-width: 768px)
+  .hero-image
+    max-width: 100%
+    margin-bottom: 20px
+
 
 .text-primaryunderh1
   color: #09f
@@ -410,8 +447,6 @@ h1, .text-primaryunderh1
   font-size: 12px
   color: #fff
   z-index: 2
-.section-hero
-  background: #f9f9f9
 
 .section-hero
   img
@@ -423,8 +458,6 @@ h1, .text-primaryunderh1
     .section-hero img
       max-height: 250px
       object-fit: cover
-
-
 
   .hero-title
     font-family: 'Rubik', sans-serif
@@ -565,76 +598,120 @@ h1, .text-primaryunderh1
     &:hover
       background: #e0a800
 
-.section-testimonial
-  background: url('../img/oceanbg.jpg') no-repeat center/cover
-  position: relative
-  color: #fff
-  padding: 5rem 0
+.text-uppercase
+  font-size: 56px
+  letter-spacing: 2px
+  line-height: 66px
+  text-transform: uppercase
+  color: #ffffff
+  font-weight: 400
+  font-family: "Rubik"
+  
+.section
+  padding: 40px 0
 
-  .testimonial-wrapper
-    max-width: 500px
-    margin-left: auto
-    padding-right: 2rem
+.description
+  text-align: left
+  padding-left: 7px 
+  font-size: 13px
+  line-height: 19px
+  color: #999999
+  font-weight: 400
+  font-family: "Rubik"
 
-  .quote-icon i
+.orangesvg
+  width: 15px
+  height: 15px
+  fill: #ffb906
+
+.title
+  padding-top: 7px
+  padding-left: 12px 
+  font-size: 18px
+  line-height: 22px
+  color: #333333
+  font-weight: 400
+  font-family: "Rubik"
+
+.section-cards-btm
+  text-align: center
+  padding-bottom: 36px
+
+  h2
     font-size: 2rem
-    color: #ffc107
+    text-transform: uppercase
+    color: #333
+    font-family: "Rubik"
+    font-weight: 400
 
-  .testimonial-text
-    font-size: 1.05rem
-    line-height: 1.6
-    font-weight: 300
-    color: #fff
+  p
+    font-size: 1rem
+    color: #555
+    
+.cardsbtm
+  padding: 40px 0
 
-  .client-info
-    img
-      border: 2px solid #fff
-    .name
-      font-size: 1rem
-      font-weight: 600
+.price
+  padding-left: 8px
+  font-size: 24px
+  line-height: 44px
+  color: #0099ff
+  font-weight: 400
+  font-family: "Rubik"
 
-  // Адаптивність
-  @media (max-width: 1024px)
-    .container
-      flex-direction: column
-      gap: 30px
-      text-align: center
+.makeorder
+  font-size: 13px
+  text-decoration: none
+  letter-spacing: 1px
+  text-transform: uppercase
+  color: #ffb700
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
 
-    .hero-title-hero
-      font-size: 40px
+.bottom-card
+  position: relative
+  max-width: 270px
+  overflow: hidden
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
 
-  @media (max-width: 768px)
-    padding: 80px 0
+  .star
+    position: absolute
+    top: 6px
+    left: 6px
+    width: 18px
+    height: 18px
+    fill: white
 
-    .hero-title-hero
-      font-size: 32px
+  .bikeonbgc
+    position: absolute
+    top: 55px
+    left: 2px
+    width: 45px
+    height: 45px
+    fill: white
 
-    .hero-text
-      font-size: 14px
+.greenflag:before 
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  border-top: 50px solid #26cb15
+  border-right: 50px solid transparent
 
-    .btn-hero
-      padding: 10px 20px
-      font-size: 14px
+.blueflag:before 
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  border-top: 190px solid #09f
+  border-right: 50px solid #09f
 
-    .quote-icon
-      font-size: 40px
 
-    .author
-      flex-direction: column
-      align-items: center
-      text-align: center
 
-      img
-        width: 40px
-        height: 40px
 
-  @media (max-width: 480px)
-    padding: 60px 0
 
-    .hero-title-hero
-      font-size: 26px
 
-    .btn-hero
-      width: 100%
-      padding: 10px
-      font-size: 14px
+
+
+  
