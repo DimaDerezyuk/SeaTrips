@@ -6,26 +6,17 @@
 html
   scroll-behavior: smooth
 
-
 html, body
   overflow-x: hidden
 
 body
+  background-color: #f5f8fa
   font-family: 'Rubik', sans-serif
 
 header
   position: relative
   background: url('../img/shipbgc.jpg') no-repeat center/cover
-
-  &::after
-    content: ''
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    height: 30% 
-    background: linear-gradient(to top, #fff 0%, transparent 100%)
-    z-index: 2
+  background-position: bottom
 
   .container
     position: relative
@@ -97,30 +88,29 @@ header
   font-family: "Rubik"
   text-align: center
 
-.section-border 
-  position: relative
-  top: 75px
-  display: flex
-  justify-content: center
-  align-items: center
-  height: 0 // щоб не впливало на розмітку
+.section-border:before
+  content: ""
+  position: absolute
+  top: -40px
+  left: 27%
+  width: 47%
+  height: 60px
+  opacity: 0.300
+  border-left: 4px solid rgba(252, 252, 252, 252)
+  border-top: 4px solid rgba(252, 252, 252, 252)
+  border-right: 4px solid rgba(252, 252, 252, 252)
 
-  // верхня кутова рамка
-  &::before,
-  &::after 
-    content: ""
-    position: absolute
-    height: 40px
-    width: 50%
-    border-top: 4px solid rgba(255, 255, 255, 0.2)
-    top: -125px
-
-  &::before 
-    left: 5
-    border-left: 4px solid rgba(255, 255, 255, 0.2)
-  &::after 
-    right: 5
-    border-right: 4px solid rgba(255, 255, 255, 0.2)
+.section-border:after
+  content: ""
+  position: absolute
+  top: 280px
+  left: 27%
+  width: 47%
+  height: 120px
+  opacity: 0.300
+  border-left: 4px solid rgba(252, 252, 252, 252)
+  border-right: 4px solid rgba(252, 252, 252, 252)
+  border-bottom: 4px solid rgba(252, 252, 252, 252)
 
 .btn-warning
   text-transform: uppercase
@@ -168,13 +158,11 @@ header
   cursor: pointer
 
 .card 
-  background-color: #fff
+  background-color: #f5f8fa
   padding: 1.5rem
   transition: box-shadow 0.3s ease 
-
   &:hover 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1)
-  
+    background-color: #fff
 
   i 
     display: block
@@ -320,7 +308,7 @@ h2
   position: relative
 
   .content-block
-    position: relative // Щоб price-box був абсолютно позиціонованим у межах контенту
+    position: relative
 
     .hero-title
       font-size: 2.2rem
@@ -431,6 +419,30 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
   text-align: center
 
+.topolega
+  left: 0
+  position: absolute
+
+.olegname
+  font-size: 18px
+  line-height: 26px
+  color: #ffffff
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+  
+.client
+  font-size: 18px
+  line-height: 26px 
+  color: #999
+  font-weight: 200
+  font-family: "Rubik"
+  text-align: center
+
+.textoleg
+  position: relative
+  text-align: left
+  font-style: italic
 
 .card.position-relative::before
   content: ""
@@ -540,22 +552,14 @@ h1, .text-primaryunderh1
   .price-card
     width: 100%
 
+
+
 .section-surfer
   background: url('../img/surfer.webp') center/cover no-repeat
   color: #fff
   padding: 100px 0
   position: relative
   z-index: 1
-
-  &::after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background: rgba(0, 0, 0, 0.4)
-    z-index: -1
 
   .container
     max-width: 1200px
@@ -566,6 +570,94 @@ h1, .text-primaryunderh1
     gap: 50px
     align-items: center
     justify-content: space-between
+
+.testimonial
+  position: relative
+  padding: 40px
+
+.olegshka
+  position: absolute
+  width: 90px
+  left: 50%
+  bottom: 0
+  transform: translate(-50% , 50%)
+  z-index: 1
+
+.anna-card
+  padding: 50px 50px
+  position: relative
+
+.anna-card:before                                                                
+  content: ""                    
+  position: absolute
+  top: 0px
+  left: 0%
+  width: 20%
+  height: 100%
+  border-left: 4px solid #ffb700
+  border-top: 4px solid #ffb700
+  border-bottom: 4px solid #ffb700
+
+.anna-card:after
+  content: ""
+  position: absolute
+  top: 0px
+  right: 0%
+  width: 20%
+  height: 100%
+  border-top: 4px solid #ffb700
+  border-right: 4px solid #ffb700
+  border-bottom: 4px solid #ffb700
+
+.annasvg
+  position: absolute
+  width: 90px
+  left: 50%
+  bottom: 0
+  transform: translate(-50% , 50%)
+  z-index: 1
+  
+.question
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50% , -50%)
+  font-size: 18px
+  letter-spacing: 1px
+  line-height: 26px
+  color: #333333
+  font-weight: 400
+  text-align: center
+
+.suka
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50% , -50%)
+
+.testimonial:before                                                                
+  content: ""                    
+  position: absolute
+  top: -1px
+  left: 0%
+  width: 40%
+  height: 100%
+  opacity: 0.102
+  border-left: 4px solid rgba(252, 252, 252, 252)
+  border-top: 4px solid rgba(252, 252, 252, 252)
+  border-bottom: 4px solid rgba(252, 252, 252, 252)
+
+.testimonial:after
+  content: ""
+  position: absolute
+  top: 0%
+  right: 0%
+  width: 40%
+  height: 100%
+  opacity: 0.102
+  border-top: 4px solid rgba(252, 252, 252, 252)
+  border-right: 4px solid rgba(252, 252, 252, 252)
+  border-bottom: 4px solid rgba(252, 252, 252, 252)
 
   .hero-title-hero
     color: #fff
@@ -620,13 +712,22 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
 
 .orangesvg
-  width: 15px
-  height: 15px
+  width: 12px
+  height: 12px
   fill: #ffb906
 
 .title
   padding-top: 7px
-  padding-left: 12px 
+  padding-left: 7px 
+  font-size: 18px
+  line-height: 22px
+  color: #333333
+  font-weight: 400
+  font-family: "Rubik"
+
+.titlevelo
+  margin-top: 0
+  padding-left: 7px 
   font-size: 18px
   line-height: 22px
   color: #333333
@@ -660,6 +761,8 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
 
 .makeorder
+  padding-right: 11px
+  padding-bottom: 12px
   font-size: 13px
   text-decoration: none
   letter-spacing: 1px
@@ -669,11 +772,83 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
   text-align: center
 
+.bottomblock
+  font-size: 36px
+  line-height: 42px
+  text-transform: uppercase
+  color: #333333
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.bottomh1blc
+  font-size: 16px
+  line-height: 24px
+  color: #333
+  font-weight: 400
+  font-style: italic
+  font-family: "Rubik"
+  text-align: center
+
+
+p.rebellious
+  margin: 0
+  padding: 0
+  display: flex
+  align-items: center
+
+.saygoodday
+  font-size: 13px
+  line-height: 16px
+  color: #999
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.anna
+  font-size: 18px
+  line-height: 26px
+  color: #333
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.phonetxt
+  text-decoration: none
+  font-size: 18px
+  line-height: 26px
+  color: #0099ff
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.annatext
+  font-size: 13px
+  line-height: 19px
+  color: #999
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.phonesvg
+  position: absolute
+  fill: #09f
+  top: 134px
+  left: 50px
+  width: 16px
+  height: 17px 
+
+
 .bottom-card
+  cursor: pointer
+  margin: 0 auto
   position: relative
   max-width: 270px
   overflow: hidden
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+  transition: box-shadow 0.3s ease 
+
+  &:hover 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1)
 
   .star
     position: absolute
@@ -685,11 +860,14 @@ h1, .text-primaryunderh1
 
   .bikeonbgc
     position: absolute
-    top: 55px
-    left: 2px
-    width: 45px
-    height: 45px
+    top: 70px
+    left: 6px
+    width: 35px
+    height: 40px
     fill: white
+    z-index: 3
+    pointer-events: none // щоб не заважала клікам
+
 
 .greenflag:before 
   content: ""
@@ -707,11 +885,105 @@ h1, .text-primaryunderh1
   border-top: 190px solid #09f
   border-right: 50px solid #09f
 
+.footertop
+  background: url('../img/footerbgc.webp') no-repeat center/cover
+  padding: 200px 0
+  position: relative
+  background-position: top
 
+.infa
+  font-size: 18px
+  line-height: 24px
+  color: #ffffff
+  font-weight: 400
+  font-family: "Rubik"
 
+.btnfooter
+  background-color: transparent
+  text-transform: uppercase
+  text-decoration: none
+  color: #ffb700
+  font-weight: 500
+  padding: 9.5px 39.2px
+  border-radius: 25px
+  font-size: 14px
+  border: 1px solid #ffb700
+  transition: all 0.3s ease
+  display: inline-block
+  text-align: center
 
+  &:hover
+    border-color: #ffb700
+    background-color: #ffb700
+    color: #fff
 
+.filesvg
+  width: 60px
+  height: 40px
 
-
-
+.sizefile
+  font-size: 13px
+  line-height: 19px
+  color: #bbb
+  font-weight: 400
+  font-family: "Rubik"
   
+.cloudfirst
+  position: absolute
+  top: 212px
+  bottom: 48px
+  left: 38px
+
+.cloud2
+  position: absolute
+  bottom: 38px
+  left: 38px
+
+.undersffirst
+  padding-bottom: 15px
+  font-size: 13px
+  line-height: 19px
+  color: #fff
+  font-weight: 400
+  font-family: "Rubik"
+
+.cloudfirst, .cloud2
+  fill: #ffb700
+  transition: all 1s ease
+  width: 15px
+  height: 15px
+
+.btnfooter:hover > svg
+  fill: #fff
+  transition: all 1s ease
+  
+.undersf
+  font-size: 13px
+  line-height: 19px
+  color: #fff
+  font-weight: 400
+  font-family: "Rubik"
+
+.firstfooter-card
+  position: relative
+  box-sizing: border-box
+  width: 270px
+  height: 269px
+  padding: 20px 15px
+  background: url('../img/hotelschedule.png') no-repeat center/cover
+
+.firstfooter-card2
+  position: relative
+  box-sizing: border-box
+  width: 270px
+  height: 269px
+  padding: 20px 15px
+  background: url('../img/infoeat.png') no-repeat center/cover
+
+.footer-text
+  padding: 15px 15px
+  color: #fff
+  text-align: center
+
+.footerblock
+  background-color: #000
