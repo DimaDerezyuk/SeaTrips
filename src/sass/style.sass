@@ -68,10 +68,12 @@ header
   height: 50px
 
 .seatripstext
+  font-size: 16px
+  line-height: 24px
+  color: #ffffff
+  font-weight: 400
+  font-family: "Rubik"
   text-align: center
-  color: white
-  max-width: 800px
-  margin: 0 auto
   padding-bottom: 60px
 
 .firmadesc
@@ -88,29 +90,40 @@ header
   font-family: "Rubik"
   text-align: center
 
-.section-border:before
-  content: ""
-  position: absolute
-  top: -40px
-  left: 27%
-  width: 47%
-  height: 60px
-  opacity: 0.300
-  border-left: 4px solid rgba(252, 252, 252, 252)
-  border-top: 4px solid rgba(252, 252, 252, 252)
-  border-right: 4px solid rgba(252, 252, 252, 252)
+.section-border
+  position: relative
 
-.section-border:after
-  content: ""
-  position: absolute
-  top: 280px
-  left: 27%
-  width: 47%
-  height: 120px
-  opacity: 0.300
-  border-left: 4px solid rgba(252, 252, 252, 252)
-  border-right: 4px solid rgba(252, 252, 252, 252)
-  border-bottom: 4px solid rgba(252, 252, 252, 252)
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    opacity: 0.3
+    border-left: 4px solid rgba(252, 252, 252, 1)
+    border-right: 4px solid rgba(252, 252, 252, 1)
+
+  &:before
+    top: -40px
+    left: 27%
+    width: 47%
+    height: 60px
+    border-top: 4px solid rgba(252, 252, 252, 1)
+
+  &:after
+    top: 280px
+    left: 27%
+    width: 47%
+    height: 120px
+    border-bottom: 4px solid rgba(252, 252, 252, 1)
+
+@media (max-width: 1024px)
+  .section-border
+    &:before,
+    &:after
+      content: none
+
+    
+  
+
 
 .btn-warning
   text-transform: uppercase
@@ -207,6 +220,33 @@ header
   text-align: right
   padding-right: 4px
   text-decoration: none
+  transition: .5s ease
+
+.seeallplans
+  display: inline-flex
+  align-items: center
+  padding-left: 330px
+  gap: 4px
+  font-size: 1rem
+  font-weight: 400
+  color: #09f
+  text-decoration: none
+  transition: color 0.3s ease
+
+  svg
+    width: 18px
+    height: 18px
+    fill: #09f
+    transition: fill 0.3s ease
+
+  &:hover
+    color: #f4b400 // колір при наведенні (приклад: жовтий)
+
+    svg
+      fill: #f4b400
+
+
+
 hr
   margin-top: 55px
 
@@ -522,6 +562,7 @@ h1, .text-primaryunderh1
 
 @media (max-width: 576px)
   .btn-order,
+  .detail-btn,
   .btn-details
     display: block
     width: 100%
@@ -539,7 +580,7 @@ h1, .text-primaryunderh1
 
   .price-title
     font-size: 1.25rem
-    font-weight: 700
+    font-weight: 400
     color: #007bff
     margin-bottom: 0.75rem
 
@@ -814,6 +855,7 @@ p.rebellious
   text-align: center
 
 .phonetxt
+  position: relative
   text-decoration: none
   font-size: 18px
   line-height: 26px
@@ -833,8 +875,8 @@ p.rebellious
 .phonesvg
   position: absolute
   fill: #09f
-  top: 134px
-  left: 50px
+  top: 2px
+  left: -17px
   width: 16px
   height: 17px 
 
@@ -930,14 +972,13 @@ p.rebellious
   
 .cloudfirst
   position: absolute
-  top: 212px
-  bottom: 48px
-  left: 38px
+  bottom: 35px
+  left: 36px
 
 .cloud2
   position: absolute
-  bottom: 38px
-  left: 38px
+  bottom: 35px
+  left: 36px
 
 .undersffirst
   padding-bottom: 15px
@@ -967,17 +1008,13 @@ p.rebellious
 .firstfooter-card
   position: relative
   box-sizing: border-box
-  width: 270px
-  height: 269px
   padding: 20px 15px
   background: url('../img/hotelschedule.png') no-repeat center/cover
 
 .firstfooter-card2
   position: relative
   box-sizing: border-box
-  width: 270px
-  height: 269px
-  padding: 20px 15px
+  padding: 20px 13px
   background: url('../img/infoeat.png') no-repeat center/cover
 
 .footer-text
@@ -987,3 +1024,6 @@ p.rebellious
 
 .footerblock
   background-color: #000
+
+.nicecard
+  padding-bottom: 30px

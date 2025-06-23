@@ -12,7 +12,7 @@ html(lang="en")
 
   body
     header.header
-      nav.navbar.navbar-expand-lg.navbar-light.menutop
+      nav.navbar.navbar-dark.navbar-expand-lg.navbar-light.menutop
         .container
           a.navbar-brand(href="#")
             img.logo(src="img/sealogo.png", alt="")
@@ -31,8 +31,10 @@ html(lang="en")
       .seatripstext
         .container
           .section-border
-          p.titletxt морські пригоди 
-          p.subtitle Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+          .row.justify-content-center.text-center
+              p.titletxt Морські пригоди
+              p.subtitle.col-12.col-lg-6 Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+
           button.btn.btn-warning.bthdetal(type="button") Детальніше
           .scroll-section
             h2.changeyourplan ОБЕРИ СВІЙ 
@@ -79,9 +81,9 @@ html(lang="en")
         .row
     .col-12.text-center.custom-spacing
       a.seeallplans(href="#") Дивитись усі плани 
-        include components/rightarrow
+        svg.seeallplanssvg <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM294.6 151.2c-4.2-4.6-10.1-7.2-16.4-7.2C266 144 256 154 256 166.3l0 41.7-96 0c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l96 0 0 41.7c0 12.3 10 22.3 22.3 22.3c6.2 0 12.1-2.6 16.4-7.2l84-91c3.5-3.8 5.4-8.7 5.4-13.9s-1.9-10.1-5.4-13.9l-84-91z"/></svg>
       hr
-.section-hero.py-5
+.section-hero
   .container
     .row.align-items-center
       .col-md-4
@@ -95,8 +97,8 @@ html(lang="en")
           | Білосніжний пісок, бірюзове море, і мальовничі скелі, а на них же, трохи вище – буйна тропічна рослинність. Все це можна побачити на власні очі.
 
         .d-flex.gap-3.align-items-center.flex-wrap
-          a.btn-order(href="#") ЗАМОВИТИ ТУР
-          a.btn-details(href="#") ДЕТАЛЬНІШЕ
+          a.btn-order.mb-3(href="#") ЗАМОВИТИ ТУР
+          a.btn-details.mb-3(href="#") ДЕТАЛЬНІШЕ
 
       .col-md-3
         .price-card.text-center
@@ -125,7 +127,7 @@ html(lang="en")
           p.textoleg
             | Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють справжні професіонали своєї справи.
           .client.mt-4
-            img.olegshka(src="/img/olegshka.svg", alt="Олег", width="86", height="86")
+            img.olegshka(src="img/olegshka.svg", alt="Олег", width="86", height="86")
             span.name.text-white.ms-3.olegname Олег Набережний
             p.underolegtxt клієнт
             
@@ -191,7 +193,7 @@ html(lang="en")
     .row
       .col-xs-12.col-lg-3.px-0
         h2.aboutus Додаткова інформація
-      .col-12.col-md-6.col-lg-3.veda
+      .col-12.col-md-6.col-lg-3.mb-3.nicecard
         .firstfooter-card
           .d-flex
             img.cardbgc
@@ -203,8 +205,8 @@ html(lang="en")
             a.btn.btn-warning.btnfooter(href="#") 
               <svg class="cloudfirst" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128l-368 0zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39L344 184c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 134.1-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z"/></svg>
               | Скачати
-      .col-12.col-md-6.col-lg-3
-        .firstfooter-card2.mb-3
+      .col-12.col-md-6.col-lg-3.mb-3.nicecard
+        .firstfooter-card2
           .bgccard.d-flex
             img.cardbgc2
             img.filesvg(src="img/file.svg", alt="")
