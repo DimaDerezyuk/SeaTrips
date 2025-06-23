@@ -4,7 +4,10 @@
   box-sizing: border-box
   
 html
-  scroll-behavior: smooth
+  scroll-behavior: smooth  
+  
+  @media (min-width: 2560px)
+    font-size: 20px
 
 html, body
   overflow-x: hidden
@@ -103,15 +106,15 @@ header
 
   &:before
     top: -40px
-    left: 27%
-    width: 47%
-    height: 60px
+    left: 35%
+    width: 30%
+    height: 50px
     border-top: 4px solid rgba(252, 252, 252, 1)
 
   &:after
     top: 280px
-    left: 27%
-    width: 47%
+    left: 35%
+    width: 30%
     height: 120px
     border-bottom: 4px solid rgba(252, 252, 252, 1)
 
@@ -121,9 +124,14 @@ header
     &:after
       content: none
 
-    
-  
-
+.titletxt2
+  font-size: 36px
+  line-height: 42px
+  text-align: left
+  text-transform: uppercase
+  color: #333333
+  font-weight: 400
+  font-family: "Rubik"
 
 .btn-warning
   text-transform: uppercase
@@ -139,11 +147,21 @@ header
   text-decoration: none
 
 .bluebtn
+  border-color: #3b9aed
   text-transform: uppercase
   border-radius: 25px
   padding: 9.5px 36.2px
+  color: #000
 
-  
+.bluebtn:hover
+  background-color: #3b9aed
+  text-transform: uppercase
+  color: #fff
+
+.orange-btn
+  border-radius: 25px
+  padding: 9.5px 36.2px
+
 .subtitle
   font-style: italic 
   font-size: 18px
@@ -213,6 +231,7 @@ header
   font-family: "Rubik"
   text-align: center
 
+
 .text-mutedcard
   text-align: left
 
@@ -223,6 +242,7 @@ header
   transition: .5s ease
 
 .seeallplans
+  justify-content: center  
   display: inline-flex
   align-items: center
   gap: 4px
@@ -318,6 +338,26 @@ h2
 
 .bg-light
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05)
+
+.card-pricestyle
+  padding: 15px
+  background-color: #edf2f5
+
+.card-price
+  font-size: 24px
+  line-height: 44px
+  color: #0099ff
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
+
+.underprice
+  font-size: 13px
+  line-height: 20px
+  color: #999999
+  font-weight: 400
+  font-family: "Rubik"
+  text-align: center
 
 .section 
   h2 
@@ -430,6 +470,7 @@ h1, .text-primaryunderh1
   color: #ffffff
   font-weight: 400
   font-family: "Rubik"
+
 .hero-image
   width: 100%
   height: auto
@@ -570,23 +611,6 @@ h1, .text-primaryunderh1
     margin-bottom: 10px
     white-space: normal
 
-.price-card
-  background-color: #f2f4f6
-  padding: 1.5rem
-  border-radius: 12px
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04)
-  max-width: 100%
-
-  .price-title
-    font-size: 1.25rem
-    font-weight: 400
-    color: #007bff
-    margin-bottom: 0.75rem
-
-  .price-description
-    color: #6c757d
-    font-size: 0.9rem
-    line-height: 1.5  
 
 @media (max-width: 576px)
   .price-card
@@ -735,7 +759,7 @@ h1, .text-primaryunderh1
   letter-spacing: 2px
   line-height: 66px
   text-transform: uppercase
-  color: #ffffff
+  color: #09f
   font-weight: 400
   font-family: "Rubik"
   
@@ -752,9 +776,21 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
 
 .orangesvg
+  position: absolute
+  bottom: 17px
   width: 12px
   height: 12px
   fill: #ffb906
+
+.titlefuu 
+  font-style: italic
+  padding-top: 7px
+  padding-left: 7px 
+  font-size: 18px
+  line-height: 22px
+  color: #333333
+  font-weight: 400
+  font-family: "Rubik"
 
 .title
   padding-top: 7px
@@ -764,7 +800,7 @@ h1, .text-primaryunderh1
   color: #333333
   font-weight: 400
   font-family: "Rubik"
-
+  
 .titlevelo
   margin-top: 0
   padding-left: 7px 
@@ -801,14 +837,15 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
 
 .makeorder
-  padding-right: 11px
+  position: relative
+  padding-right: 15px
   padding-bottom: 12px
-  font-size: 13px
-  text-decoration: none
+  font-size: 14px
   letter-spacing: 1px
   text-transform: uppercase
   color: #ffb700
   font-weight: 400
+  text-decoration: none
   font-family: "Rubik"
   text-align: center
 
@@ -996,7 +1033,11 @@ p.rebellious
 .btnfooter:hover > svg
   fill: #fff
   transition: all 1s ease
-  
+
+.aboutus
+  @media (max-width: 988px)
+    text-align: center
+
 .undersf
   font-size: 13px
   line-height: 19px
@@ -1016,6 +1057,8 @@ p.rebellious
   padding: 20px 13px
   background: url('../img/infoeat.png') no-repeat center/cover
 
+
+
 .footer-text
   padding: 15px 15px
   color: #fff
@@ -1026,3 +1069,19 @@ p.rebellious
 
 .nicecard
   padding-bottom: 30px
+
+.bottom-bodysurf 
+  @media (max-width: 768px) 
+    width: 222px
+    height: 167px
+
+
+.bottom-bodysurf
+  @media (max-width: 1199px) 
+    width: 222px
+    height: 197px
+  @media (max-width: 768px)
+    width: 100%
+    height: auto
+    padding: 15px
+
