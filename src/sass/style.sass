@@ -68,7 +68,8 @@ header
 
 .logo
   height: 50px
-
+.card-body
+  padding: 0
 .seatripstext
   font-size: 16px
   line-height: 24px
@@ -203,7 +204,7 @@ header
   
   h6 
     padding-top: 15px
-    font-weight: 450
+    font-weight: 350
  
   p 
     margin-bottom: 0.25rem
@@ -223,6 +224,34 @@ header
   font-size: 12px
   color: white
   z-index: 1
+
+.orange-btn, .bluebtn
+  padding: 12px 0
+  border-radius: 50px
+  font-weight: 600
+  font-size: 1rem
+  text-align: center
+  text-transform: uppercase
+  transition: 0.3s ease
+
+  @media (max-width: 320px)
+    padding: 4px 0
+    font-size: 0.85rem
+
+.button-group
+  display: flex
+  flex-direction: column
+  gap: 12px
+  padding-inline: 16px
+
+  @media (min-width: 480px)
+    padding-inline: 24px
+
+  @media (min-width: 768px)
+    flex-direction: row
+    justify-content: start
+    padding-inline: 0
+
 
 .text-primarypricecard
   font-size: 24px
@@ -330,8 +359,27 @@ h2
   
 .btn
   text-transform: uppercase
+  padding: 9.2px 39.2px
   font-weight: 500
-
+.btnorange
+  text-decoration: none
+  text-transform: uppercase
+  background-color: #ffc107
+  color: #fff
+  font-weight: 600
+  font-size: 14px
+  padding: 9.5px 39.2px
+  border-radius: 25px
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15)
+  white-space: nowrap
+  transition: all 0.2s ease-in-out
+  
+  &:hover
+    background-color: #3b9aed
+    color: #fff
+.left-content
+  +media(320)
+    padding-bottom: 45px
 .bg-light
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05)
 
@@ -615,8 +663,13 @@ h1, .text-primaryunderh1
 
 .anna-card
   position: relative
-  padding: 50px 28px
-
+  padding: 63px 38px
+  +media(1400)
+    padding: 64px 28px
+  +media(1200)
+    padding: 56px 28px
+  +media(992)
+    padding: 35px 28px
 
 
 .anna-card:before                                                                
@@ -661,6 +714,8 @@ h1, .text-primaryunderh1
   color: #333333
   font-weight: 400
   text-align: center
+  @media (min-width: 190px)
+    padding-top: 15px
 
 .suka
   position: absolute
@@ -679,6 +734,8 @@ h1, .text-primaryunderh1
   border-left: 4px solid rgba(252, 252, 252, 252)
   border-top: 4px solid rgba(252, 252, 252, 252)
   border-bottom: 4px solid rgba(252, 252, 252, 252)
+  +media(728)
+    padding-top: 15px
 
 .testimonial:after
   content: ""
@@ -742,6 +799,9 @@ h1, .text-primaryunderh1
   color: #999999
   font-weight: 400
   font-family: "Rubik"
+
+.suka
+  +media(286)
 
 .descriptionsurfer
   +media(1200)
