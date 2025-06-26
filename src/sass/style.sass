@@ -115,9 +115,9 @@ header
     border-top: 4px solid rgba(252, 252, 252, 1)
 
   &:after
-    top: 280px
-    left: 35%
-    width: 30%
+    top: 283px
+    left: 40%
+    width: 20.5%
     height: 120px
     border-bottom: 4px solid rgba(252, 252, 252, 1)
 
@@ -289,7 +289,7 @@ header
     transition: fill 0.3s ease
 
   &:hover
-    color: #f4b400 // колір при наведенні (приклад: жовтий)
+    color: #f4b400
 
     svg
       fill: #f4b400
@@ -572,15 +572,10 @@ h1, .text-primaryunderh1
   z-index: 2
 
 .section-hero
-  img
-    width: 100%
-    height: auto
-    max-width: 100%
-    border-radius: 0.5rem
-    @media (max-width: 768px)
-    .section-hero img
-      max-height: 250px
-      object-fit: cover
+  @media (max-width: 768px)
+  .section-hero img
+    max-height: 250px
+    object-fit: cover
 
   .hero-title
     font-family: 'Rubik', sans-serif
@@ -1113,3 +1108,9 @@ p.rebellious
 
 .footerblock
   background-color: #000
+
+.classanna
+  @media ( max-width: 320px )
+    padding-top: 25px
+.imgfix
+  width: 100%
