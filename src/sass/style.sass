@@ -12,9 +12,9 @@ html
 body
   background-color: #f5f8fa
   font-family: 'Rubik'
-  
+ 
 html, body
-  overflow-x: hidden
+  overflow-x: hidden 
 
 header
   position: relative
@@ -31,7 +31,7 @@ header
   justify-content: space-between
 
 .navbar-light
-  padding-bottom: 150px 
+  padding-bottom: 80px 
 
 
 .navbar
@@ -94,7 +94,10 @@ header
   font-family: "Rubik"
   text-align: center
   +media(1440)
-    font-size: 72
+    font-size: 72px
+  +media(319)
+    line-height: 65px
+    font-size: 55px
 
 
 .section-border
@@ -109,7 +112,7 @@ header
     border-right: 4px solid rgba(252, 252, 252, 1)
 
   &:before
-    top: -20px
+    top: -40px
     left: 40%
     width: 20.5%
     height: 30px
@@ -155,7 +158,7 @@ header
   text-transform: uppercase
   border-radius: 25px
   padding: 9.5px 36.2px
-  color: #000
+  color: #09f
 
 .bluebtn:hover
   background-color: #3b9aed
@@ -494,6 +497,7 @@ h2
   line-height: 1.6
 
 .text-muted
+  padding-top: 15px
   text-align: center
 
 h1, .text-primaryunderh1
@@ -661,11 +665,11 @@ h1, .text-primaryunderh1
   position: relative
   padding: 63px 38px
   +media(1400)
-    padding: 64px 28px
+    padding: 73px 28px
   +media(1200)
-    padding: 56px 28px
+    padding: 65.5px 28px
   +media(992)
-    padding: 35px 28px
+    padding: 64px 28px
 
 
 .anna-card:before                                                                
@@ -704,14 +708,14 @@ h1, .text-primaryunderh1
   top: 0
   left: 50%
   transform: translate(-50% , -50%)
-  font-size: 18px
+  font-size: 15px
   letter-spacing: 1px
   line-height: 26px
   color: #333333
   font-weight: 400
   text-align: center
   @media (min-width: 190px)
-    padding-top: 15px
+    padding-top: 1px
 
 .suka
   position: absolute
@@ -789,6 +793,7 @@ h1, .text-primaryunderh1
 
 .description, .descriptionsurfer
   text-align: left
+  min-height: 92px
   padding-left: 7px 
   font-size: 13px
   line-height: 19px
@@ -796,6 +801,8 @@ h1, .text-primaryunderh1
   font-weight: 400
   font-family: "Rubik"
 
+p
+  margin: 0px
 .suka
   +media(286)
 
@@ -822,6 +829,7 @@ h1, .text-primaryunderh1
   font-family: "Rubik"
 
 .title
+  min-height: 52px
   padding-top: 7px
   padding-left: 7px 
   font-size: 18px
@@ -904,6 +912,7 @@ p.rebellious
   align-items: center
 
 .saygoodday
+  padding-bottom: 17px
   font-size: 13px
   line-height: 16px
   color: #999
@@ -972,8 +981,6 @@ p.rebellious
     width: 35px
     height: 40px
     fill: white
-    z-index: 3
-    pointer-events: none // щоб не заважала клікам
 
 
 .greenflag:before 
@@ -1037,12 +1044,19 @@ p.rebellious
   
 .cloudfirst
   position: absolute
-  bottom: 35px
+  bottom: 34px
   left: 36px
 
+.bottom-body
+  padding: 15px
+
+.customspacingfirst
+  +media(992)
+    padding-top: 19px
+  
 .cloud2
   position: absolute
-  bottom: 35px
+  bottom: 34px
   left: 36px
 
 .undersffirst
@@ -1052,26 +1066,29 @@ p.rebellious
   color: #fff
   font-weight: 400
   font-family: "Rubik"
+  +media(768)
+    padding-bottom: 45px
+  +media(992)
+    padding-bottom: 49px 
 
 .cloudfirst, .cloud2
   fill: #ffb700
-  transition: all 1s ease
+  transition: all .5s ease
   width: 15px
   height: 15px
 
 .btnfooter:hover > svg
   fill: #fff
-  transition: all 1s ease
+  transition: all .5s ease
 
 .aboutus
   text-align: center
   text-transform: uppercase
+  +media(992)
+    padding-bottom: 20px
   @media (max-width: 988px)
     text-align: center
 
-.customspacingfirst
-  +media(1200)
-    padding-bottom: 23px
 
 .customspacing2
   +media(1200)
@@ -1079,7 +1096,7 @@ p.rebellious
   +media(1199)
     padding-bottom: 21px
   +media(992)
-    padding-bottom: 21px  
+    padding-bottom: 25px  
   +media(768)
     padding-bottom: 5px  
 
@@ -1089,6 +1106,8 @@ p.rebellious
   line-height: 19px
   color: #fff
   font-weight: 400
+  +media(768)
+    padding-bottom: 24px 
 
 .firstfooter-card
   background: url('../img/hotelschedule.png') no-repeat center/cover
